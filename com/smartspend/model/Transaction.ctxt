@@ -1,0 +1,14 @@
+#BlueJ class context
+#Thu Sep 17 13:35:08 IST 2026
+comment0.target=Transaction
+comment1.params=id category amount description transactionDate
+comment1.target=Transaction(int, Category, double, java.lang.String, java.time.LocalDate)
+comment2.target=java.lang.String getType()
+comment3.target=double getSignedAmount()
+comment4.target=int getId()
+comment5.target=Category getCategory()
+comment6.target=double getAmount()
+comment7.target=java.lang.String getDescription()
+comment8.target=java.time.LocalDate getTransactionDate()
+comment9.target=java.lang.String toString()
+numComments=10

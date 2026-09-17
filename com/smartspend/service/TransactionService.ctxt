@@ -1,0 +1,15 @@
+#BlueJ class context
+#Thu Sep 17 13:38:58 IST 2026
+comment0.target=TransactionService
+comment1.params=repository
+comment1.target=TransactionService(com.smartspend.repository.TransactionRepository)
+comment2.params=category amount description date
+comment2.target=void addIncome(com.smartspend.model.Category, double, java.lang.String, java.time.LocalDate)
+comment3.params=category amount description date
+comment3.target=void addExpense(com.smartspend.model.Category, double, java.lang.String, java.time.LocalDate)
+comment4.target=java.util.List getAllTransactions()
+comment5.params=id
+comment5.target=void deleteTransaction(int)
+comment6.params=amount
+comment6.target=void validateAmount(double)
+numComments=7

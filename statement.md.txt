@@ -1,0 +1,322 @@
+# Project Statement
+
+## Project Title
+
+**SmartSpend: Personal Expense Tracker and Budget Analyzer**
+
+---
+
+## 1. Problem Statement
+
+Managing personal finances is a common challenge for students and individuals. People often spend money on food, travel, education, shopping, rent, entertainment, and other necessities without keeping a clear record. When income and expenses are not tracked properly, it becomes difficult to know the remaining balance, identify high-spending categories, and control unnecessary expenditure.
+
+Traditional manual methods, such as notebooks or informal notes, are time-consuming and can lead to calculation mistakes, missing records, and difficulty in creating summaries. Users need a simple system that can record financial transactions, organize them into categories, compare expenses with budgets, and generate a clear financial report.
+
+SmartSpend is proposed as a Java-based console application that solves this problem. The application enables a user to record income and expense transactions, define category-wise budgets, analyze spending patterns, generate financial summaries, export reports to a text file, and store data in an H2 database through JDBC.
+
+---
+
+## 2. Project Objective
+
+The main objective of SmartSpend is to develop a simple, reliable, and user-friendly Java application for tracking personal financial activity.
+
+The specific objectives are:
+
+- To allow the user to record income transactions.
+- To allow the user to record expense transactions.
+- To classify expenses into meaningful categories.
+- To store transaction data permanently using JDBC and H2 Database.
+- To enable category-wise monthly budget setting and monitoring.
+- To calculate total income, total expenses, and remaining financial balance.
+- To identify the category in which the user spends the highest amount.
+- To display budget warnings when expenses exceed the configured limit.
+- To generate and export a monthly financial report using Java I/O streams.
+- To demonstrate important Java programming concepts in a real-world use case.
+
+---
+
+## 3. Scope of the Project
+
+SmartSpend is designed as a single-user, offline, console-based personal finance management prototype.
+
+The project includes:
+
+- Income and expense entry.
+- Category selection using predefined Java enum values.
+- Transaction storage and retrieval.
+- Transaction deletion.
+- Budget creation and budget update.
+- Category-wise spending analysis.
+- Budget comparison and exceeded-budget warnings.
+- Financial report generation.
+- Text-file export of the report.
+- Persistent storage using H2 embedded database and JDBC.
+
+The project does not include:
+
+- Multi-user login or authentication.
+- Online banking integration.
+- Credit/debit card integration.
+- Real payment processing.
+- Cloud synchronization.
+- Mobile application support.
+- Graphical user interface.
+- Real email or SMS alerts.
+
+These features are proposed as future enhancements.
+
+---
+
+## 4. Target Users
+
+The SmartSpend system is designed for the following users:
+
+| Target user | How the system helps |
+|---|---|
+| Students | Helps manage pocket money, food expenses, travel expenses, and education expenses |
+| Individuals | Helps track monthly income, daily spending, and remaining balance |
+| Budget-conscious users | Helps set category limits and detect overspending |
+| Beginners learning finance tracking | Provides a simple console-based way to understand personal budgeting |
+| Java programming students | Demonstrates Java OOP, JDBC, Collections, I/O Streams, and Exception Handling in one project |
+
+---
+
+## 5. High-Level Features
+
+### Transaction Management
+
+- Add income transactions.
+- Add expense transactions.
+- Select category, amount, description, and date.
+- View all saved transactions.
+- Delete a transaction using its ID.
+- Validate transaction amount before saving.
+
+### Budget Management
+
+- Set a category-wise monthly budget.
+- Update an existing budget.
+- Retrieve and display configured budgets.
+- Calculate expense totals for each category.
+- Display warning messages for exceeded budgets.
+
+### Reporting and Analytics
+
+- Calculate total income.
+- Calculate total expenses.
+- Calculate remaining balance.
+- Generate category-wise expense analysis.
+- Identify highest-spending category.
+- Generate a formatted monthly report.
+- Export report to a text file.
+
+### Database Management
+
+- Create required database tables automatically.
+- Store income and expense transactions through JDBC.
+- Retrieve transactions from H2 Database.
+- Save and update budgets.
+- Delete transactions using transaction ID.
+
+---
+
+## 6. Functional Requirements
+
+| Requirement ID | Requirement description |
+|---|---|
+| FR-01 | The system shall display a numbered console menu |
+| FR-02 | The user shall be able to add an income transaction |
+| FR-03 | The user shall be able to add an expense transaction |
+| FR-04 | The user shall select a valid category for each transaction |
+| FR-05 | The system shall validate that transaction amounts are greater than zero |
+| FR-06 | The system shall store transactions in the H2 database using JDBC |
+| FR-07 | The user shall be able to view all stored transactions |
+| FR-08 | The user shall be able to delete a transaction using its ID |
+| FR-09 | The user shall be able to set a monthly budget for a category |
+| FR-10 | The user shall be able to update an existing category budget |
+| FR-11 | The system shall calculate total expense for each category |
+| FR-12 | The system shall compare category expenses against budget limits |
+| FR-13 | The system shall display a warning if the spending amount exceeds a budget |
+| FR-14 | The system shall calculate total income |
+| FR-15 | The system shall calculate total expense |
+| FR-16 | The system shall calculate the remaining balance |
+| FR-17 | The system shall identify the highest-spending expense category |
+| FR-18 | The system shall generate a monthly financial report |
+| FR-19 | The system shall export the report to a text file |
+| FR-20 | The user shall be able to exit the application safely |
+
+---
+
+## 7. Non-Functional Requirements
+
+### NFR-01: Usability
+
+The system shall provide a simple menu-driven interface. Each menu option shall be numbered, and the application shall display clear prompts, confirmations, and error messages so that a beginner can use it without technical training.
+
+### NFR-02: Reliability
+
+The system shall validate input data and handle exceptional situations safely. Invalid amounts, invalid menu selections, incorrect numeric values, unavailable transaction IDs, invalid dates, and database errors shall be handled using validation and exception handling.
+
+### NFR-03: Maintainability
+
+The application shall use a modular package structure. Model classes, service classes, repository classes, utility classes, and custom exception classes shall be placed in separate packages. This makes the code easier to read, test, debug, and extend.
+
+### NFR-04: Performance
+
+The system shall retrieve stored records through JDBC queries and use Java collections for category-wise aggregation. For the scale of a single-user expense tracker, response time should remain fast for normal transaction volumes.
+
+### NFR-05: Data Integrity
+
+The system shall prevent invalid data from being stored. Transaction amounts and budget limits must be greater than zero. Transaction categories must be selected from the predefined `Category` enum. The database schema shall use primary keys and a unique category field in the budgets table.
+
+### NFR-06: Resource Efficiency
+
+Database connections, SQL statements, result sets, file writers, and readers shall be closed after use to avoid unnecessary resource consumption.
+
+### NFR-07: Portability
+
+The application shall run locally through BlueJ on a system with Java and the H2 Database JAR installed. The embedded H2 database removes the need for a separate database server installation.
+
+### NFR-08: Error Handling Strategy
+
+The system shall use custom exceptions, such as `InvalidAmountException`, and Java exception handling blocks (`try`, `catch`, `throw`, and `throws`) to prevent unexpected program termination and provide meaningful messages to the user.
+
+---
+
+## 8. System Modules
+
+| Module | Main responsibility | Main classes |
+|---|---|---|
+| Transaction Management Module | Adds, views, and deletes income/expense transactions | `Transaction`, `Income`, `Expense`, `TransactionService` |
+| Budget Management Module | Stores budgets and compares category expenses with budget limits | `Budget`, `BudgetService` |
+| Reporting and Analytics Module | Calculates summaries and creates exportable reports | `ReportService`, `FileExporter` |
+| Database Access Module | Performs JDBC operations with H2 Database | `DatabaseConnection`, `JdbcTransactionRepository` |
+| User Interface Module | Displays menu and accepts input from the user | `Main` |
+| Error Handling Module | Validates amount and manages invalid input conditions | `InvalidAmountException` |
+
+---
+
+## 9. Input and Output Design
+
+### Input
+
+The user provides the following details through the console:
+
+| Input | Example |
+|---|---|
+| Menu choice | `1` for Add Income |
+| Transaction category | `FOOD`, `TRAVEL`, `EDUCATION` |
+| Transaction amount | `450.00` |
+| Description | `Grocery shopping` |
+| Transaction date | `2026-09-17` |
+| Budget category | `FOOD` |
+| Monthly budget amount | `1000.00` |
+| Transaction ID | `3` for deletion |
+
+### Output
+
+The system displays:
+
+- Confirmation after adding income or expense.
+- Complete transaction list.
+- Saved budget information.
+- Warning for overspending.
+- Total income, total expenses, and balance.
+- Category-wise expense totals.
+- Highest-spending category.
+- Confirmation after report export.
+- Validation and error messages.
+
+---
+
+## 10. Data Storage Design
+
+The project uses H2 embedded database through JDBC.
+
+### Table: `transactions`
+
+| Field | Data type | Constraint | Purpose |
+|---|---|---|---|
+| `id` | INT | Primary key, identity | Unique transaction ID |
+| `transaction_type` | VARCHAR(20) | Not null | Specifies INCOME or EXPENSE |
+| `category` | VARCHAR(50) | Not null | Transaction category |
+| `amount` | DECIMAL(12,2) | Not null | Transaction amount |
+| `description` | VARCHAR(255) | Optional | Transaction note/details |
+| `transaction_date` | DATE | Not null | Date of transaction |
+
+### Table: `budgets`
+
+| Field | Data type | Constraint | Purpose |
+|---|---|---|---|
+| `id` | INT | Primary key, identity | Unique budget ID |
+| `category` | VARCHAR(50) | Unique, not null | Expense category |
+| `monthly_limit` | DECIMAL(12,2) | Not null | Maximum allowed monthly spending |
+
+---
+
+## 11. Design Decisions and Rationale
+
+### Console-based design
+
+A console interface was selected because it is simple, fast to develop, easy to demonstrate in BlueJ, and appropriate for demonstrating core Java concepts within the project timeline.
+
+### Abstract `Transaction` class
+
+`Transaction` is designed as an abstract class because income and expense share common properties such as ID, category, amount, description, and date. However, their meanings differ: income increases balance while expense decreases balance.
+
+### Inheritance and polymorphism
+
+`Income` and `Expense` inherit from `Transaction`. They override methods such as `getType()` and `getSignedAmount()`. This avoids duplicate code and demonstrates Java inheritance and runtime polymorphism.
+
+### Enum for categories
+
+The `Category` enum ensures users select only predefined valid categories. This improves data consistency and reduces invalid category values.
+
+### Repository pattern
+
+A `TransactionRepository` interface separates database operations from business logic. `JdbcTransactionRepository` implements the interface using JDBC. This makes the design modular and makes it easier to replace JDBC with JPA in the future.
+
+### H2 embedded database
+
+H2 Database was chosen because it is lightweight, Java-based, supports JDBC, and can run locally without requiring separate MySQL server installation.
+
+### File-based report export
+
+A formatted report is exported to a `.txt` file using Java I/O streams. This provides a persistent report that can be opened without the application.
+
+---
+
+## 12. Expected Benefits
+
+- Better personal financial awareness.
+- Faster recording of income and expenses.
+- Improved control over category-wise budgets.
+- Clear calculation of remaining balance.
+- Easy identification of high-spending categories.
+- Persistent records through a relational database.
+- Practical demonstration of core Java programming concepts.
+
+---
+
+## 13. Future Enhancements
+
+- Add a graphical interface using JavaFX or Swing.
+- Implement user registration and login.
+- Add password hashing and authentication.
+- Add transaction update/edit option.
+- Add filtering by month, date range, or category.
+- Add graphical charts for spending analysis.
+- Add recurring transactions, such as rent or subscriptions.
+- Send email/SMS notifications for budget warnings.
+- Use multithreading for periodic report generation and alerts.
+- Implement JPA/Hibernate as an alternative persistence layer.
+- Support MySQL or PostgreSQL for multi-user deployment.
+- Create a mobile or web version of the application.
+
+---
+
+## 14. Conclusion
+
+SmartSpend is a practical Java-based personal finance management system. It provides a clear solution for recording transactions, managing category budgets, analyzing spending, generating reports, and storing financial data in a database.
+
+The project demonstrates the practical use of Java fundamentals, Object-Oriented Programming, exception handling, collections, file I/O streams, JDBC, database operations, and modular software design. It is suitable as an academic project because it connects the Java syllabus with a useful real-world financial management problem.

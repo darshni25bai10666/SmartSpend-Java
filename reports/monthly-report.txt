@@ -1,0 +1,13 @@
+
+========== SMARTSPEND MONTHLY REPORT ==========
+Total Income : Rs. 25200.00
+Total Expense: Rs. 2269.00
+Balance      : Rs. 22931.00
+
+Category-wise Expenses:
+- EDUCATION       Rs. 999.00
+- FOOD            Rs. 1150.00
+- TRAVEL          Rs. 120.00
+
+Highest Expense Category: FOOD (Rs. 1150.00)
+===============================================

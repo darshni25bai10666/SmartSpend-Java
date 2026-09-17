@@ -1,0 +1,12 @@
+#BlueJ class context
+#Thu Sep 17 13:37:04 IST 2026
+comment0.target=TransactionRepository
+comment1.params=transaction
+comment1.target=void saveTransaction(com.smartspend.model.Transaction)
+comment2.target=java.util.List getAllTransactions()
+comment3.params=id
+comment3.target=void deleteTransaction(int)
+comment4.params=budget
+comment4.target=void saveOrUpdateBudget(com.smartspend.model.Budget)
+comment5.target=java.util.List getAllBudgets()
+numComments=6

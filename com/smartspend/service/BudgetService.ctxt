@@ -1,0 +1,13 @@
+#BlueJ class context
+#Thu Sep 17 13:39:13 IST 2026
+comment0.target=BudgetService
+comment1.params=repository
+comment1.target=BudgetService(com.smartspend.repository.TransactionRepository)
+comment2.params=category limit
+comment2.target=void setBudget(com.smartspend.model.Category, double)
+comment3.target=java.util.List getAllBudgets()
+comment4.params=transactions
+comment4.target=java.util.Map calculateExpenseByCategory(java.util.List)
+comment5.params=transactions
+comment5.target=void showBudgetStatus(java.util.List)
+numComments=6

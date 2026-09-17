@@ -1,0 +1,29 @@
+#BlueJ class context
+#Thu Sep 17 13:40:26 IST 2026
+comment0.target=Main
+comment1.params=args
+comment1.target=void main(java.lang.String[])
+comment10.target=model.Category readCategory()
+comment11.params=prompt
+comment11.target=int readInt(java.lang.String)
+comment12.params=prompt
+comment12.target=double readDouble(java.lang.String)
+comment13.params=prompt
+comment13.target=java.lang.String readText(java.lang.String)
+comment14.target=java.time.LocalDate readDate()
+comment2.target=void printMenu()
+comment3.params=service isIncome
+comment3.target=void addTransaction(service.TransactionService, boolean)
+comment4.params=service
+comment4.target=void showAllTransactions(service.TransactionService)
+comment5.params=service
+comment5.target=void deleteTransaction(service.TransactionService)
+comment6.params=service
+comment6.target=void setBudget(service.BudgetService)
+comment7.params=repository service
+comment7.target=void showBudgets(repository.TransactionRepository, service.BudgetService)
+comment8.params=transactionService reportService
+comment8.target=void showReport(service.TransactionService, service.ReportService)
+comment9.params=transactionService reportService
+comment9.target=void exportReport(service.TransactionService, service.ReportService)
+numComments=15

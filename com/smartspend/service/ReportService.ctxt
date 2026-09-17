@@ -1,0 +1,14 @@
+#BlueJ class context
+#Thu Sep 17 13:39:33 IST 2026
+comment0.target=ReportService
+comment1.params=transactions
+comment1.target=double calculateTotalIncome(java.util.List)
+comment2.params=transactions
+comment2.target=double calculateTotalExpense(java.util.List)
+comment3.params=transactions
+comment3.target=java.util.Map calculateCategoryExpenses(java.util.List)
+comment4.params=transactions
+comment4.target=com.smartspend.model.Category getHighestExpenseCategory(java.util.List)
+comment5.params=transactions
+comment5.target=java.lang.String generateReport(java.util.List)
+numComments=6
