@@ -1,3 +1,5 @@
+PLEASE FIND ALL THE CODES UNDER THE COM FOLDER.
+
 # SmartSpend: Personal Expense Tracker and Budget Analyzer
 
 SmartSpend is a Java-based console application for managing personal income, expenses, and category-wise monthly budgets. It allows a user to record financial transactions, monitor spending, identify high-expense categories, generate a financial summary, and export the report to a text file.
